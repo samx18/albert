@@ -10,9 +10,9 @@ def main():
     parser.add_argument('--model_type', type=str, default='albert_base')
     parser.add_argument('--num_nodes', type=int, default=1, help='Number of nodes')
     parser.add_argument('--node_type', type=str, default='ml.p3.16xlarge', help='Node type')
-    parser.add_argument('--bucket_name', type=str, default='yuliu-dev-east-gryffindor')
+    parser.add_argument('--bucket_name', type=str, default='sagemaker-us-east-1-967669495843')
     parser.add_argument('--train_data_bucket', type=str,
-                        default="s3://yuliu-dev-east-gryffindor/albert-pretrain/pretrain")
+                        default="s3://sagemaker-us-east-1-967669495843/pretrain_data")
     parser.add_argument('--output_dir', type=str, default='albert_output')
     parser.add_argument('--max_steps', type=int, default=100)
     # model
@@ -28,7 +28,7 @@ def main():
     # initialization
     # role = args.role
     # role = 'arn:aws:iam::564829616587:role/service-role/AmazonSageMaker-ExecutionRole-20200728T150394'
-    role = 'arn:aws:iam::427566855058:role/yu-dev'
+    role = 'arn:aws:iam::967669495843:role/service-role/AmazonSageMaker-ExecutionRole-20190812T143756'
     image_uri = args.image_uri
     output_dir_s3_addr = f's3://{args.bucket_name}/{args.output_dir}'
 

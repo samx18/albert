@@ -120,4 +120,5 @@ if __name__ == "__main__":
     parser.add_argument("--logging_dir", default=os.environ['SM_OUTPUT_DATA_DIR'], type=str)
     parser.add_argument("--output_dir", default=os.environ['SM_OUTPUT_DATA_DIR'], type=str)
     args = parser.parse_args()
+    os.environ['AWS_REGION'] = 'us-east-1'
     main(args)

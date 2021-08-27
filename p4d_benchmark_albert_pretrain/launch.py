@@ -48,6 +48,10 @@ def main():
                         source_dir=".",
                         entry_point="dist_train.py",
                         image_uri=image_uri,
+                        metric_definitions=[
+                                            {'Name': 'train:loss', 'Regex': '\'loss\': (.*?),'},
+                                            {'Name': 'validation:loss', 'Regex': '\'loss\': (.*?),'}
+                                        ],
                         role=role,
                         instance_count=args.num_nodes,
                         instance_type=args.node_type,
