@@ -16,3 +16,6 @@ Copy Training data to S3
 Launch Training job
 
 `python launch.py --num_nodes=1`
+
+
+`python launch.py --num_nodes=1 --node_type='ml.p3.8xlarge' --max_steps=6000`

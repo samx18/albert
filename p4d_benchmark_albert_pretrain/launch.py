@@ -19,7 +19,7 @@ def main():
     parser.add_argument("--gradient_accumulation_steps", type=int, default=1)
     parser.add_argument("--learning_rate", type=float, default=6e-5)
     parser.add_argument("--warmup_steps", type=int, default=3125)
-    parser.add_argument("--per_gpu_train_batch_size", type=int, default=8)
+    parser.add_argument("--per_gpu_train_batch_size", type=int, default=16)
     # parser.add_argument("--role", type=str, help="sagemaker_execution_role")
     parser.add_argument("--image_uri", type=str,
                         default='427566855058.dkr.ecr.us-east-1.amazonaws.com/albert_pretrain:latest')
